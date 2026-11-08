@@ -1,0 +1,56 @@
+#auto-tracker { height: 100%; min-width: 0; width: 100%; flex: 1; color: var(--color-main-text); }
+.at-layout { min-height: 100%; display: flex; }
+.at-sidebar { width: 240px; flex: 0 0 240px; padding: 20px; background: var(--color-background-dark); border-right: 1px solid var(--color-border); }
+.at-sidebar h1 { font-size: 22px; margin: 0 0 18px; }
+.at-sidebar > button { width: 100%; }
+.at-vehicle-list { display: grid; gap: 4px; margin-top: 20px; }
+.at-vehicle { text-align: left; overflow-wrap: anywhere; }
+.at-vehicle.active, .at-tabs .active { background: var(--color-primary-element-light); font-weight: bold; }
+.at-main { min-width: 0; flex: 1; padding: 24px; }
+.at-header, .at-section-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.at-header h2 { font-size: 26px; margin: 0; }
+.at-header p, .at-help { color: var(--color-text-maxcontrast); }
+.at-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.at-danger { color: var(--color-error-text); }
+.at-tabs { display: flex; gap: 4px; overflow-x: auto; margin: 20px 0; padding-bottom: 4px; border-bottom: 1px solid var(--color-border); }
+.at-tabs button { white-space: nowrap; }
+.at-content h3, .at-dialog h3 { font-size: 20px; margin: 12px 0; }
+.at-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 16px 0; }
+.at-cards > div { background: var(--color-background-dark); border-radius: var(--border-radius-large); padding: 16px; }
+.at-cards strong, .at-cards span { display: block; overflow-wrap: anywhere; }
+.at-cards strong { font-size: 20px; }
+.at-cards span { color: var(--color-text-maxcontrast); margin-top: 4px; }
+.at-details { display: grid; grid-template-columns: 100px 1fr; gap: 10px; margin: 24px 0; }
+.at-details dt { font-weight: bold; }
+.at-details dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.at-help { margin: 14px 0; }
+.at-notice:not(:empty) { padding: 10px; margin-bottom: 12px; background: var(--color-background-dark); border-radius: var(--border-radius); }
+.at-error { color: var(--color-error-text); }
+.at-table-wrap { overflow-x: auto; }
+.at-table-wrap table { width: 100%; border-collapse: collapse; }
+.at-table-wrap th, .at-table-wrap td { padding: 10px; text-align: left; border-bottom: 1px solid var(--color-border); overflow-wrap: anywhere; }
+.at-table-wrap th { white-space: nowrap; }
+.at-notes td { white-space: pre-wrap; color: var(--color-text-maxcontrast); }
+.at-row-actions { white-space: nowrap; }
+.at-photos, .at-picker-images { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; }
+.at-photos figure { margin: 0; min-width: 0; }
+.at-photos img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--border-radius); }
+.at-photos figcaption, .at-picker-images span { overflow-wrap: anywhere; display: block; }
+.at-dialog { position: fixed; inset: 0; margin: auto; box-sizing: border-box; color: var(--color-main-text); background: var(--color-main-background); border: 0; border-radius: var(--border-radius-large); width: min(720px, 90vw); max-height: 85vh; padding: 24px; box-shadow: 0 8px 30px #0005; overflow: auto; }
+.at-dialog::backdrop { background: #0008; }
+.at-form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 16px 0; }
+.at-form-grid label { display: flex; flex-direction: column; gap: 4px; }
+.at-form-grid input, .at-form-grid textarea, .at-form-grid select { width: 100%; box-sizing: border-box; }
+.at-form-grid textarea { min-height: 90px; }
+.at-breadcrumbs, .at-picker-folders { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; margin: 12px 0; }
+.at-picker-images { max-height: 45vh; overflow-y: auto; margin: 12px 0; }
+.at-picker-images label { display: block; min-width: 0; }
+.at-picker-images img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.at-loading, .at-empty { padding: 24px; }
+@media (max-width: 700px) {
+	.at-layout { display: block; }
+	.at-sidebar { width: auto; padding: 12px; border-right: 0; border-bottom: 1px solid var(--color-border); }
+	.at-vehicle-list { display: flex; overflow-x: auto; margin-top: 8px; }
+	.at-vehicle { flex: 0 0 auto; }
+	.at-main { padding: 16px; }
+}
